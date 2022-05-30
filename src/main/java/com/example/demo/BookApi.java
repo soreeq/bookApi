@@ -37,7 +37,7 @@ public class BookApi {
 
     @ApiOperation(value = "Dodaje ksiazke", notes = "dodawanie ksiazki")
     @PostMapping
-    public boolean addBook(@PathVariable Book book ) {
+    public boolean addBook(@RequestBody Book book ) {
         return bookList.add(book);
     }
 }
